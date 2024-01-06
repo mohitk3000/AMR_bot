@@ -4,6 +4,7 @@ this repo contains all codes and docs for AMR project done under ARTPARK
 **Start  ROSserial:**
 
     rosrun rosserial_python serial_node.py /dev/ttyUSB0
+    rosrun rosserial_python serial_node.py _port:=/dev/ttyACM0 _baud:=115200
 
 Teleop twist keyboard:
 
