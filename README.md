@@ -22,3 +22,7 @@ catkin_make --pkg <my_package_name>
 find the serial port:
 
     ls /dev/tty*
+
+changing the permission of port
+
+`sudo chmod 666 ttyACM0`
