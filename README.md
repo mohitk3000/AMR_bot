@@ -13,6 +13,10 @@ create package:
 
     catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
 
+Finding ros package:
+
+    rospack find xxxx
+
 build single package:
 
     catkin_make --pkg <my_package_name>
@@ -30,6 +34,14 @@ starting lidar:
 starting Gmapping:
 
     rosrun gmapping slam_gmapping scan:=scan _odom_frame:=odom
+
+starting the navigation:
+
+    roslaunch navigation navigation.launch
+
+Abort the navigation:
+
+    rostopic pub /move_base/cancel actionlib_msgs/GoalID -- {}
 
 
 find the serial port:
