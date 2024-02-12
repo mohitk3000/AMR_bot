@@ -34,6 +34,7 @@ starting lidar:
 starting Gmapping:
 
     rosrun gmapping slam_gmapping scan:=scan _odom_frame:=odom
+    rosrun map_server map_saver -f <map_name>
 
 starting the navigation:
 
