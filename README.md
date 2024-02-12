@@ -9,6 +9,8 @@ Teleop twist keyboard:
 
     rosrun teleop_twist_keyboard teleop_twist_keyboard.py
 
+    rosrun joy joy_node
+
 create package:
 
     catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
