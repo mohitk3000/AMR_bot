@@ -16,6 +16,7 @@ create package:
 Finding ros package:
 
     rospack find xxxx
+    rosrun rviz rviz
 
 build single package:
 
