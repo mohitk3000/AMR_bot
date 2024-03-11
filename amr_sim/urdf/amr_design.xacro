@@ -1,0 +1,403 @@
+<?xml version="1.0" ?>
+<robot name="amr_design" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find amr_sim)/urdf/materials.xacro" />
+<xacro:include filename="$(find amr_sim)/urdf/amr_design.trans" />
+<xacro:include filename="$(find amr_sim)/urdf/amr_design.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="4.34293161952502e-08 0.0007075385399918776 0.21775676551373888" rpy="0 0 0"/>
+    <mass value="28.18933160748244"/>
+    <inertia ixx="1.104626" iyy="0.801025" izz="1.003593" ixy="1e-06" iyz="0.001918" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="-1.1832858374980215e-05 0.0009877800085065036 0.015438905016050442" rpy="0 0 0"/>
+    <mass value="0.6647072859562074"/>
+    <inertia ixx="0.000193" iyy="0.000203" izz="0.000283" ixy="-0.0" iyz="-6e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 0.0 -0.158561" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 0.0 -0.158561" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_link_r_1">
+  <inertial>
+    <origin xyz="-0.15412529880173792 -0.11500010567690626 0.11449795512993528" rpy="0 0 0"/>
+    <mass value="0.06418655107615541"/>
+    <inertia ixx="3.5e-05" iyy="2.1e-05" izz="1.7e-05" ixy="-0.0" iyz="-0.0" ixz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.32 -0.23 0.056874" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/motor_link_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.32 -0.23 0.056874" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/motor_link_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_link_l_1">
+  <inertial>
+    <origin xyz="-0.14587456410757924 -0.11499990033989657 0.11449791787703273" rpy="0 0 0"/>
+    <mass value="0.06418655107615541"/>
+    <inertia ixx="3.5e-05" iyy="2.1e-05" izz="1.7e-05" ixy="-0.0" iyz="0.0" ixz="-3e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.02 -0.23 0.056874" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/motor_link_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.02 -0.23 0.056874" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/motor_link_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_r_1">
+  <inertial>
+    <origin xyz="-0.05635001788786538 -6.5858262022905345e-06 -1.221125114220234e-07" rpy="0 0 0"/>
+    <mass value="0.8213709119975673"/>
+    <inertia ixx="0.000162" iyy="0.001167" izz="0.001167" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.17 -0.115 -0.048563" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/motor_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.17 -0.115 -0.048563" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/motor_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_l_1">
+  <inertial>
+    <origin xyz="0.056350154978548464 6.577108987937397e-06 -1.593673448138655e-07" rpy="0 0 0"/>
+    <mass value="0.8213709119975673"/>
+    <inertia ixx="0.000162" iyy="0.001167" izz="0.001167" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.17 -0.115 -0.048563" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/motor_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.17 -0.115 -0.048563" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/motor_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_l_1">
+  <inertial>
+    <origin xyz="-0.0075790110931034105 4.895732681246823e-05 -8.475106433227658e-05" rpy="0 0 0"/>
+    <mass value="0.23688184356082517"/>
+    <inertia ixx="0.000233" iyy="0.000131" izz="0.000131" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.191 -0.115 -0.048563" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/wheel_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.191 -0.115 -0.048563" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/wheel_l_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_r_1">
+  <inertial>
+    <origin xyz="0.007579148242007366 4.8712059150940457e-05 8.446956797159011e-05" rpy="0 0 0"/>
+    <mass value="0.23688184356082517"/>
+    <inertia ixx="0.000233" iyy="0.000131" izz="0.000131" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.191 -0.115 -0.048563" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/wheel_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.191 -0.115 -0.048563" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/wheel_r_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin xyz="0.0002454814704876357 0.006382495876978728 -0.012250005389911611" rpy="0 0 0"/>
+    <mass value="0.22483003425861206"/>
+    <inertia ixx="1.3e-05" iyy="0.000224" izz="0.000216" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.0 0.244 -0.133813" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.0 0.244 -0.133813" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_wheel_1">
+  <inertial>
+    <origin xyz="-0.15005987543361307 0.07214257035279964 0.08970044227297669" rpy="0 0 0"/>
+    <mass value="0.5936583900768129"/>
+    <inertia ixx="0.0005" iyy="0.000359" izz="0.000215" ixy="-0.0" iyz="-0.0001" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.15 0.23 0.050874" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/castor_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.15 0.23 0.050874" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://amr_sim/meshes/castor_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="rigid_1" type="fixed">
+  <origin xyz="0.0 0.0 0.158561" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="rigid_3" type="fixed">
+  <origin xyz="0.32 0.23 -0.056874" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_link_r_1"/>
+</joint>
+
+<joint name="rigid_4" type="fixed">
+  <origin xyz="-0.02 0.23 -0.056874" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_link_l_1"/>
+</joint>
+
+<joint name="rigid_5" type="fixed">
+  <origin xyz="-0.15 -0.115 0.105437" rpy="0 0 0"/>
+  <parent link="motor_link_r_1"/>
+  <child link="motor_r_1"/>
+</joint>
+
+<joint name="rigid_6" type="fixed">
+  <origin xyz="-0.15 -0.115 0.105437" rpy="0 0 0"/>
+  <parent link="motor_link_l_1"/>
+  <child link="motor_l_1"/>
+</joint>
+
+<joint name="revolute_7" type="continuous">
+  <origin xyz="-0.021 0.0 0.0" rpy="0 0 0"/>
+  <parent link="motor_l_1"/>
+  <child link="wheel_l_1"/>
+  <axis xyz="1.0 -1e-06 -0.0"/>
+</joint>
+
+<joint name="revolute_8" type="continuous">
+  <origin xyz="0.021 0.0 0.0" rpy="0 0 0"/>
+  <parent link="motor_r_1"/>
+  <child link="wheel_r_1"/>
+  <axis xyz="1.0 1e-06 -0.0"/>
+</joint>
+
+<joint name="rigid_9" type="fixed">
+  <origin xyz="0.0 -0.244 0.133813" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_1"/>
+</joint>
+
+<joint name="rigid_10" type="fixed">
+  <origin xyz="0.15 -0.23 -0.050874" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="castor_wheel_1"/>
+</joint>
+
+
+<gazebo>
+  <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+
+    <!-- Plugin update rate in Hz -->
+    <updateRate>400</updateRate>
+
+    <!-- Name of left joint, defaults to left_joint -->
+    <leftJoint>revolute_7</leftJoint>
+
+    <!-- Name of right joint, defaults to right_joint -->
+    <rightJoint>revolute_8</rightJoint>
+
+    <!-- The distance from the center of one wheel to the other, in meters, defaults to 0.34 m -->
+    <wheelSeparation>0.42</wheelSeparation>
+
+    <!-- Diameter of the wheels, in meters, defaults to 0.15 m -->
+    <wheelDiameter>0.1</wheelDiameter>
+
+    <!-- Wheel acceleration, in rad/s^2, defaults to 0.0 rad/s^2 -->
+    <wheelAcceleration>1.0</wheelAcceleration>
+
+    <!-- Maximum torque which the wheels can produce, in Nm, defaults to 5 Nm -->
+    <wheelTorque>20</wheelTorque>
+
+    <!-- Topic to receive geometry_msgs/Twist message commands, defaults to cmd_vel -->
+    <commandTopic>cmd_vel</commandTopic>
+
+    <!-- Topic to publish nav_msgs/Odometry messages, defaults to odom -->
+    <odometryTopic>odom</odometryTopic>
+
+    <!-- Odometry frame, defaults to odom -->
+    <odometryFrame>odom</odometryFrame>
+
+    <!-- Robot frame to calculate odometry from, defaults to base_footprint -->
+    <robotBaseFrame>base_footprint</robotBaseFrame>
+
+    <!-- Odometry source, 0 for ENCODER, 1 for WORLD, defaults to WORLD -->
+    <odometrySource>0</odometrySource>
+
+    <!-- Set to true to publish transforms for the wheel links, defaults to false -->
+    <publishWheelTF>true</publishWheelTF>
+
+    <!-- Set to true to publish transforms for the odometry, defaults to true -->
+    <publishOdom>true</publishOdom>
+    <publishOdomTF>true</publishOdomTF>
+    <publishTf>true</publishTf>
+
+    <!-- Set to true to publish sensor_msgs/JointState on /joint_states for the wheel joints, defaults to false -->
+    <publishWheelJointState>true</publishWheelJointState>
+
+    <!-- Set to true to swap right and left wheels, defaults to true -->
+    <legacyMode>false</legacyMode>
+  </plugin>
+</gazebo>
+
+
+
+  <!-- hokuyo laser -->
+  <gazebo reference="lidar_1">
+    <sensor type="gpu_ray" name="head_hokuyo_sensor">
+      <pose>0 0 0.023 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>40</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-3.14</min_angle>
+            <max_angle>3.14</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.30</min>
+          <max>20.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. -->
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_gpu_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>lidar_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+<link name="imu_link">
+  <inertial>
+    <origin xyz="0.0 0.0 0.08970044227297669" rpy="0 0 0"/>
+    <mass value="0.0005"/>
+    <inertia ixx="0.0" iyy="0.000359" izz="0.0" ixy="0.0" iyz="0.000" ixz="0.0"/>
+  </inertial>
+</link>
+
+<joint name="imu_joint" type="fixed">
+  <origin xyz="0.0 0.0 0.0075" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="imu_link"/>
+</joint>
+
+<gazebo reference="imu_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>imu_link</bodyName>
+        <updateRateHZ>10.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_link</frameName>
+        <initialOrientationAsReference>false</initialOrientationAsReference>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+
+</robot>
